@@ -105,5 +105,16 @@ $(document).ready(() => {
   $('#to-blue').click(() => {
     theme.attr('href', 'css/blue.css')
   })
-  console.log(posts)
+
+  // SCROLL TO TOP
+  $('.go-up').click((event) => {
+    event.preventDefault()
+    $('html, body').animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    )
+    return false
+  })
 })

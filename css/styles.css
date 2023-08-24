@@ -188,3 +188,10 @@ footer {
 #to-blue {
   background: #1f87c4;
 }
+
+.go-up {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  float: right;
+}
