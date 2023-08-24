@@ -64,3 +64,43 @@ body {
   text-decoration: none;
   padding: 0 30px;
 }
+
+#posts {
+  width: 60%;
+  float: left;
+  font-family: Helvetica, Arial;
+}
+
+.post {
+  padding: 7px;
+}
+
+.post h2 {
+  font-size: 30px;
+  color: #333;
+}
+
+.post .date {
+  display: block;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.post p {
+  margin: 10px 0 20px 0;
+  line-height: 22px;
+  text-align: justify;
+}
+
+.button-more {
+  display: block;
+  padding: 15px 5px;
+  background: #235e3d;
+  text-decoration: none;
+  color: #ffffff;
+  margin-top: 10px;
+  width: 100px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+}
