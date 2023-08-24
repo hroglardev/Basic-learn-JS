@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.theme.min.css" />
     <!-- some interactivity from jquery -->
     <script src="js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 
     <script src="js/main.js"></script>
     <title>JavaScript project</title>
@@ -42,35 +43,21 @@
 
       <section id="content">
         <div id="box">
-          <h2>About me</h2>
-          <div id="accordion">
-            <h3>Who am I?</h3>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Provident tempore expedita neque pariatur et quo obcaecati
-                assumenda consequuntur distinctio natus, quos vero eveniet.
-                Harum totam quo at incidunt necessitatibus. Placeat.
-              </p>
-            </div>
-            <h3>My hobbies</h3>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Provident tempore expedita neque pariatur et quo obcaecati
-                assumenda consequuntur distinctio natus, quos vero eveniet.
-                Harum totam quo at incidunt necessitatibus. Placeat.
-              </p>
-            </div>
-            <h3>My family</h3>
-            <div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Provident tempore expedita neque pariatur et quo obcaecati
-                assumenda consequuntur distinctio natus, quos vero eveniet.
-                Harum totam quo at incidunt necessitatibus. Placeat.
-              </p>
-            </div>
+          <h2>Contact</h2>
+          <form action="" method="POST">
+            <label for="name">Name: </label>
+            <input type="text" name="name" data-validation="alphanumeric required">
+            <label for="surname">Surname: </label>
+            <input type="text" name="surname" data-validation="alphanumeric required">
+            <label for="email">Email: </label>
+            <input type="email" name="email" data-validation="email required">
+            <label for="company">Company: </label>
+            <input type="text" name="company"data-validation="alphanumeric required">
+            <label for="country">Country: </label>
+            <input type="text" name="country"data-validation="alphanumeric required">
+            <button type="submit">Submit</button>
+          </form>
+            
           </div>
         </div>
         <aside id="aside">

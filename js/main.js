@@ -152,4 +152,13 @@ $(document).ready(() => {
       $('#clock').html(clock)
     }, 1000)
   }
+
+  // VALIDATION
+  if (window.location.href.indexOf('contact') > -1) {
+    $.validate({
+      lang: 'en',
+      errorMessagePosition: 'top',
+      scrollToTopOnError: 'true',
+    })
+  }
 })
