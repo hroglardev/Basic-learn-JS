@@ -66,7 +66,8 @@
   padding: 7px;
 }
 
-.post h2 {
+h2 {
+  font-family: Helvetica, Arial;
   font-size: 30px;
   color: #333;
 }
@@ -194,4 +195,13 @@ footer {
   color: #ffffff;
   display: block;
   float: right;
+}
+
+#box {
+  width: 60%;
+  float: left;
+  margin-top: 40px;
+}
+#accordion {
+  margin-top: 20px;
 }
