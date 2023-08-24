@@ -94,6 +94,16 @@ $(document).ready(() => {
     $('#posts').append(post)
   })
 
-  //
+  // CHANGE THEME
+  let theme = $('#theme')
+  $('#to-green').click(() => {
+    theme.attr('href', 'css/green.css')
+  })
+  $('#to-red').click(() => {
+    theme.attr('href', 'css/red.css')
+  })
+  $('#to-blue').click(() => {
+    theme.attr('href', 'css/blue.css')
+  })
   console.log(posts)
 })
