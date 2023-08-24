@@ -13,7 +13,7 @@ $(document).ready(() => {
 
   // POSTS
 
-  let posts = [
+  const posts = [
     {
       title: 'Prueba de titulo 1',
       date: `Published on ${moment().day()} of ${moment().format(
@@ -82,7 +82,7 @@ $(document).ready(() => {
   ]
 
   posts.forEach((userPost) => {
-    let post = `<article class='post'>
+    const post = `<article class='post'>
     <h2>${userPost.title}</h2>
     <span class='date'>${userPost.date}</span>
     <p>${userPost.content}</p>
@@ -95,7 +95,7 @@ $(document).ready(() => {
   })
 
   // CHANGE THEME
-  let theme = $('#theme')
+  const theme = $('#theme')
   $('#to-green').click(() => {
     theme.attr('href', 'css/green.css')
   })
@@ -117,4 +117,24 @@ $(document).ready(() => {
     )
     return false
   })
+
+  // LOGIN
+  $('#login form').submit(() => {
+    const formName = $('#name').val()
+    localStorage.setItem('formName', formName)
+  })
+
+  const formName = localStorage.getItem('formName')
+  if (formName !== null && formName !== undefined) {
+    const aboutParagraph = $('#about p')
+    aboutParagraph.html(`<br /><strong>Welcome ${formName}</strong>`)
+    aboutParagraph.append(`<a href="#" id="logout">Log out</a>`)
+
+    $('#login').hide()
+
+    $('#logout').click(() => {
+      localStorage.clear()
+      location.reload()
+    })
+  }
 })
